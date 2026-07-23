@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — TeNA</title>
+<meta name="robots" content="noindex, follow">
+<style>
+  :root{
+    --ink:#1c1b18;
+    --paper:#e8e1cb;
+    --lake:#1f4b43;
+    --turmeric:#d9a441;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    background:radial-gradient(circle at 20% 10%, #f2ede0 0%, var(--paper) 45%, #ddd3b6 100%);
+    color:var(--ink);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:24px;
+  }
+  .card{
+    width:min(620px, 100%);
+    border:1px solid rgba(28,27,24,0.2);
+    background:rgba(242,237,224,0.9);
+    padding:30px;
+  }
+  .code{
+    font-size:14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--lake);
+    margin-bottom:10px;
+    font-weight:600;
+  }
+  h1{
+    font-size:clamp(28px, 5vw, 44px);
+    line-height:1.1;
+    margin-bottom:12px;
+  }
+  p{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:24px;
+    max-width:52ch;
+  }
+  a{
+    display:inline-block;
+    border:1px solid var(--lake);
+    color:var(--lake);
+    text-decoration:none;
+    padding:10px 16px;
+    font-size:14px;
+    font-weight:600;
+  }
+  a:hover{background:var(--lake); color:#f2ede0;}
+  .accent{color:var(--turmeric);}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="code">Error 404</div>
+    <h1>That page is off the civic map<span class="accent">.</span></h1>
+    <p>The link may be outdated or the page may have moved. Head back to the main TeNA page to continue.</p>
+    <a href="./">Back to homepage</a>
+  </main>
+</body>
+</html>
