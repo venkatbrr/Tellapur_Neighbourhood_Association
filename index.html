@@ -14,6 +14,7 @@
 <meta property="og:title" content="TeNA — Tellapur Neighbourhood Association">
 <meta property="og:description" content="Fifty-five communities. One voice for Tellapur.">
 <meta property="og:site_name" content="TeNA">
+<meta property="og:url" content="https://venkatbrr.github.io/Tellapur_Neighbourhood_Association/">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TeNA — Tellapur Neighbourhood Association">
@@ -22,6 +23,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tellapur Neighbourhood Association",
+  "alternateName": "TeNA",
+  "url": "https://venkatbrr.github.io/Tellapur_Neighbourhood_Association/",
+  "sameAs": [
+    "https://x.com/TellapurN",
+    "https://www.youtube.com/channel/UC-gwbWTd2XxdnbfEGR5xDcQ",
+    "https://www.instagram.com/tena_tellapur/"
+  ],
+  "areaServed": "Tellapur and Nallagandla, Sangareddy District, Telangana"
+}
+</script>
 <style>
   :root{
     --ink:#1c1b18;
@@ -122,6 +138,14 @@
   }
   .hero-areas span::before{content:"·"; margin-right:8px; color:var(--turmeric);}
   .hero-areas span:first-child::before{content:none;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px;}
+  .hero-btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:11px 18px; border:1.5px solid var(--paper-light);
+    text-decoration:none; font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+  .hero-btn.primary{background:var(--paper-light); color:var(--lake-deep);}
 
   /* ---------- Stat strip ---------- */
   .stats{
@@ -176,6 +200,51 @@
     font-size:13px; font-family:'IBM Plex Mono', monospace;
     border-left:2px solid var(--turmeric); padding-left:12px; opacity:0.75;
   }
+
+  /* ---------- Updates ---------- */
+  .updates-grid{display:grid; gap:1px; border:1px solid var(--line); background:var(--line);}
+  @media (min-width:760px){ .updates-grid{grid-template-columns:repeat(3,1fr);} }
+  .update-card{background:var(--paper); padding:28px;}
+  .update-card .month{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--terracotta);
+  }
+  .update-card h3{font-size:23px; margin:10px 0 10px;}
+  .update-card p{font-size:14.5px; opacity:0.82; margin-bottom:14px;}
+  .update-card .meta{font-size:12.5px; opacity:0.65;}
+
+  /* ---------- Stories ---------- */
+  .stories{
+    background:linear-gradient(180deg, var(--lake-mid) 0%, var(--lake-deep) 100%);
+    color:var(--paper-light);
+  }
+  .stories .section-head h2,
+  .stories .section-head p{color:var(--paper-light);}
+  .stories .eyebrow{color:var(--turmeric); opacity:1;}
+  .stories-grid{display:grid; gap:1px; border:1px solid var(--line-light); background:var(--line-light);}
+  @media (min-width:760px){ .stories-grid{grid-template-columns:repeat(3,1fr);} }
+  .story-card{background:rgba(15,46,41,0.72); padding:28px;}
+  .story-card h3{font-size:22px; margin-bottom:8px;}
+  .story-card p{font-size:14px; opacity:0.8; margin-bottom:14px;}
+  .story-card .chip{
+    display:inline-flex; font-family:'IBM Plex Mono', monospace; font-size:11.5px;
+    border:1px solid rgba(242,237,224,0.45); padding:5px 10px; border-radius:999px;
+  }
+  .story-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-wrap{max-width:860px;}
+  .faq-list{display:grid; gap:10px;}
+  .faq-item{
+    border:1px solid var(--line); background:var(--paper-light);
+    padding:0 18px;
+  }
+  .faq-item summary{
+    cursor:pointer; list-style:none; padding:16px 0;
+    font-family:'Fraunces', serif; font-size:21px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item p{padding-bottom:16px; font-size:14.5px; opacity:0.82; max-width:72ch;}
 
   /* ---------- Civic Ledger (signature element) ---------- */
   .ledger{background:var(--ink); color:var(--paper-light);}
@@ -273,6 +342,8 @@
       <a href="#about">About</a>
       <a href="#focus">Focus Areas</a>
       <a href="#ledger">Civic Ledger</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
       <a href="#involve">Get Involved</a>
     </nav>
     <a class="navcta" href="#involve">Join Us</a>
@@ -291,6 +362,10 @@
     <span class="eyebrow">Est. by residents, for residents · Sangareddy, Telangana</span>
     <h1>Fifty-five communities.<br>One voice for Tellapur.</h1>
     <p class="lede">TeNA is the resident-run association that speaks for Tellapur and Nallagandla on the issues that don't wait: roads, water, drainage, safety, and the lakes we grew up around. No committee decides quietly — every ask goes on the record.</p>
+    <div class="hero-actions">
+      <a class="hero-btn primary" href="#ledger">View Civic Ledger</a>
+      <a class="hero-btn" href="https://www.instagram.com/tena_tellapur/" target="_blank" rel="noopener">See Instagram Stories</a>
+    </div>
     <div class="hero-areas">
       <span>Tellapur</span><span>Nallagandla</span><span>Kollur</span><span>Mokila</span><span>Kokapet</span><span>Manikonda</span>
     </div>
@@ -324,6 +399,36 @@
         <li><span>Core asks</span><b>Roads · Water · Drainage · Safety</b></li>
         <li><span>Public record</span><b>Filed via X &amp; direct petitions</b></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section id="updates">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Current priorities</span>
+      <h2>What residents will see next</h2>
+      <p>Beyond long-term petitions, TeNA runs short-cycle actions every month so residents can track progress, volunteer, and hold officials accountable in real time.</p>
+    </div>
+    <div class="updates-grid">
+      <article class="update-card">
+        <div class="month">August 2026</div>
+        <h3>Road hazard mapping drive</h3>
+        <p>Ward-level volunteers are collecting geotagged photos of potholes and flooding points to submit a single, prioritized repair demand before the monsoon peak.</p>
+        <div class="meta">Owners: resident volunteers + municipal engineering wing</div>
+      </article>
+      <article class="update-card">
+        <div class="month">September 2026</div>
+        <h3>Mellacheruvu water audit</h3>
+        <p>Monthly water quality snapshots and visual tracking of floating wetland performance will be shared publicly so lake restoration is measured, not assumed.</p>
+        <div class="meta">Partners: TeNA, civic volunteers, CSR collaborators</div>
+      </article>
+      <article class="update-card">
+        <div class="month">Quarterly</div>
+        <h3>Open grievance day</h3>
+        <p>Residents can bring unresolved issues from any community and leave with a logged reference, escalation owner, and expected follow-up timeline.</p>
+        <div class="meta">Format: public register + follow-up tracker</div>
+      </article>
     </div>
   </div>
 </section>
@@ -423,6 +528,65 @@
   </div>
 </section>
 
+<section class="stories" id="stories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Instagram Stories</span>
+      <h2>Ground updates from streets, lakes, and meetings</h2>
+      <p>Stories are where fast civic updates land first: field videos, before/after snapshots, meeting reminders, volunteer calls, and issue escalations.</p>
+    </div>
+    <div class="stories-grid">
+      <article class="story-card">
+        <h3>Field alerts</h3>
+        <p>Road flooding, broken streetlights, sewage overflow, and unsafe junctions reported by residents during the week.</p>
+        <span class="chip">Highlight: Street Watch</span>
+      </article>
+      <article class="story-card">
+        <h3>Lake watch</h3>
+        <p>Progress clips from clean-up drives, floating wetlands, and volunteer turnout around Mellacheruvu and connected catchments.</p>
+        <span class="chip">Highlight: Mellacheruvu</span>
+      </article>
+      <article class="story-card">
+        <h3>Community actions</h3>
+        <p>Sports meet moments, health camp snapshots, and neighbourhood mobilization updates across Tellapur and nearby communities.</p>
+        <span class="chip">Highlight: Community</span>
+      </article>
+    </div>
+    <div class="story-actions">
+      <a class="btn solid" href="https://www.instagram.com/tena_tellapur/" target="_blank" rel="noopener">Follow @tena_tellapur</a>
+      <a class="btn ghost" href="https://www.instagram.com/tellapur_neighbourhood_association/" target="_blank" rel="noopener">Alternate profile</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>How TeNA works</h2>
+      <p>Simple answers for residents who want to raise issues, volunteer, or understand how petitions move from complaint to closure.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Who can raise an issue through TeNA?</summary>
+        <p>Any resident from Tellapur, Nallagandla, or neighboring communities can raise an issue. Apartment associations, villa communities, and independent house clusters are all included.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is an issue tracked after it is reported?</summary>
+        <p>TeNA records the issue with context, assigns an escalation path, and tracks follow-up through public updates and references in the Civic Ledger where available.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does TeNA handle only complaints?</summary>
+        <p>No. TeNA also coordinates preventive and community work, including clean-up drives, health camps, sports events, and safety initiatives.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How can I volunteer?</summary>
+        <p>Follow TeNA channels, attend the next resident meeting, or message via X and Instagram with your community name and area of support.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="involve" id="involve">
   <div class="wrap involve-inner">
     <div>
@@ -432,6 +596,7 @@
     </div>
     <div class="involve-actions">
       <a class="btn solid" href="https://x.com/TellapurN" target="_blank" rel="noopener">Follow @TellapurN on X →</a>
+      <a class="btn ghost" href="https://www.instagram.com/tena_tellapur/" target="_blank" rel="noopener">Instagram Stories →</a>
       <a class="btn ghost" href="https://www.youtube.com/channel/UC-gwbWTd2XxdnbfEGR5xDcQ" target="_blank" rel="noopener">Watch on YouTube →</a>
       <a class="btn ghost" href="#footer-contact">Raise an issue →</a>
     </div>
@@ -448,6 +613,7 @@
       <h4>Channels</h4>
       <ul>
         <li><a href="https://x.com/TellapurN" target="_blank" rel="noopener">X / Twitter — @TellapurN</a></li>
+        <li><a href="https://www.instagram.com/tena_tellapur/" target="_blank" rel="noopener">Instagram — @tena_tellapur</a></li>
         <li><a href="https://www.youtube.com/channel/UC-gwbWTd2XxdnbfEGR5xDcQ" target="_blank" rel="noopener">YouTube channel</a></li>
       </ul>
     </div>
