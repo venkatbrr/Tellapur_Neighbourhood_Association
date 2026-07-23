@@ -156,9 +156,13 @@
     display:grid; grid-template-columns:repeat(2,1fr);
     gap:28px; padding:36px 28px; max-width:1120px; margin:0 auto;
   }
-  @media (min-width:700px){ .stats-inner{grid-template-columns:repeat(4,1fr);} }
+  @media (min-width:700px){ .stats-inner{grid-template-columns:repeat(3,1fr);} }
   .stat .num{font-family:'Fraunces', serif; font-size:34px; color:var(--turmeric);}
   .stat .label{font-size:12.5px; opacity:0.7; margin-top:4px;}
+  .stats-note{
+    max-width:1120px; margin:0 auto; padding:0 28px 28px;
+    font-size:12px; opacity:0.68; color:rgba(242,237,224,0.78);
+  }
 
   /* ---------- Section shared ---------- */
   section{padding:88px 0;}
@@ -212,6 +216,20 @@
   .update-card h3{font-size:23px; margin:10px 0 10px;}
   .update-card p{font-size:14.5px; opacity:0.82; margin-bottom:14px;}
   .update-card .meta{font-size:12.5px; opacity:0.65;}
+
+  /* ---------- Sources ---------- */
+  .sources{background:var(--paper-light); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .source-list{display:grid; gap:1px; border:1px solid var(--line); background:var(--line);}
+  .source-item{background:var(--paper); padding:20px 22px;}
+  .source-item a{
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    font-family:'Fraunces', serif;
+    font-size:20px;
+  }
+  .source-item a:hover{border-bottom-color:var(--terracotta);}
+  .source-item p{margin-top:7px; font-size:14px; opacity:0.8;}
+  .source-item .src-meta{margin-top:8px; font-size:12.5px; opacity:0.62;}
 
   /* ---------- Stories ---------- */
   .stories{
@@ -340,9 +358,11 @@
     <div class="brand">TeNA <span class="full">Tellapur Neighbourhood Association</span></div>
     <nav class="navlinks">
       <a href="#about">About</a>
+      <a href="#updates">Latest</a>
       <a href="#focus">Focus Areas</a>
       <a href="#ledger">Civic Ledger</a>
       <a href="#stories">Stories</a>
+      <a href="#sources">Sources</a>
       <a href="#faq">FAQ</a>
       <a href="#involve">Get Involved</a>
     </nav>
@@ -374,11 +394,14 @@
 
 <div class="stats">
   <div class="stats-inner">
-    <div class="stat"><div class="num">65+</div><div class="label">communities represented</div></div>
-    <div class="stat"><div class="num">1,500+</div><div class="label">residents at our 2025 sports meet</div></div>
-    <div class="stat"><div class="num">200+</div><div class="label">women screened, breast cancer camp</div></div>
-    <div class="stat"><div class="num">50+</div><div class="label">volunteers, Mellacheruvu clean-up</div></div>
+    <div class="stat"><div class="num">65+</div><div class="label">communities currently represented by TeNA</div></div>
+    <div class="stat"><div class="num">200+</div><div class="label">residents joined voter-awareness run (Apr 2024)</div></div>
+    <div class="stat"><div class="num">1,000+</div><div class="label">attendees at Karthika Vana Bhojanaalu (Dec 2024)</div></div>
+    <div class="stat"><div class="num">1,500+</div><div class="label">participants reported in annual sports series (Jan 2025)</div></div>
+    <div class="stat"><div class="num">30+</div><div class="label">Green Army volunteers in No-Plastic campaign teams</div></div>
+    <div class="stat"><div class="num">5,000</div><div class="label">residents reportedly affected in Osman Nagar road protest zone</div></div>
   </div>
+  <p class="stats-note">Stats combine TeNA records and external reporting (Hyderabad Mail, Deccan Chronicle, The Hans India, and TeNA public channels, 2024-2026).</p>
 </div>
 
 <section id="about">
@@ -395,6 +418,7 @@
       <ul>
         <li><span>Region</span><b>Tellapur &amp; Nallagandla, Sangareddy Dist.</b></li>
         <li><span>Structure</span><b>Voluntary resident association</b></li>
+        <li><span>President</span><b>Ramana Eshwaragari</b></li>
         <li><span>Reach</span><b>65+ communities</b></li>
         <li><span>Core asks</span><b>Roads · Water · Drainage · Safety</b></li>
         <li><span>Public record</span><b>Filed via X &amp; direct petitions</b></li>
@@ -406,28 +430,28 @@
 <section id="updates">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Current priorities</span>
-      <h2>What residents will see next</h2>
-      <p>Beyond long-term petitions, TeNA runs short-cycle actions every month so residents can track progress, volunteer, and hold officials accountable in real time.</p>
+      <span class="eyebrow">Latest verified updates</span>
+      <h2>Recent developments from reports and public records</h2>
+      <p>These are high-confidence events documented by news reports and official/public TeNA channels since 2024.</p>
     </div>
     <div class="updates-grid">
       <article class="update-card">
-        <div class="month">August 2026</div>
-        <h3>Road hazard mapping drive</h3>
-        <p>Ward-level volunteers are collecting geotagged photos of potholes and flooding points to submit a single, prioritized repair demand before the monsoon peak.</p>
-        <div class="meta">Owners: resident volunteers + municipal engineering wing</div>
+        <div class="month">27 Apr 2024</div>
+        <h3>Voter awareness run in Tellapur</h3>
+        <p>TeNA organized an early-morning voter awareness run ahead of Lok Sabha polling, with more than 200 residents reported participating.</p>
+        <div class="meta">Reported by Hyderabad Mail and Deccan Chronicle</div>
       </article>
       <article class="update-card">
-        <div class="month">September 2026</div>
-        <h3>Mellacheruvu water audit</h3>
-        <p>Monthly water quality snapshots and visual tracking of floating wetland performance will be shared publicly so lake restoration is measured, not assumed.</p>
-        <div class="meta">Partners: TeNA, civic volunteers, CSR collaborators</div>
+        <div class="month">21 Sep 2024</div>
+        <h3>Dharna on road conditions and school transport</h3>
+        <p>Residents led with TeNA support staged a dharna over poor roads in Osman Nagar and Missing Link Road 152, citing daily mobility and safety impacts.</p>
+        <div class="meta">Reported by Hyderabad Mail</div>
       </article>
       <article class="update-card">
-        <div class="month">Quarterly</div>
-        <h3>Open grievance day</h3>
-        <p>Residents can bring unresolved issues from any community and leave with a logged reference, escalation owner, and expected follow-up timeline.</p>
-        <div class="meta">Format: public register + follow-up tracker</div>
+        <div class="month">4 May 2026</div>
+        <h3>Seven-point civic and environment submission</h3>
+        <p>Resident forums led by TeNA submitted seven priority concerns to local authorities, including RR30 road completion, drainage, lake protection and waste monitoring.</p>
+        <div class="meta">Reported by The Hans India</div>
       </article>
     </div>
   </div>
@@ -583,6 +607,58 @@
         <summary>How can I volunteer?</summary>
         <p>Follow TeNA channels, attend the next resident meeting, or message via X and Instagram with your community name and area of support.</p>
       </details>
+    </div>
+  </div>
+</section>
+
+<section class="sources" id="sources">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Press and references</span>
+      <h2>Source-backed coverage and public channels</h2>
+      <p>For transparency, this page now anchors key claims to published reporting and official/public TeNA channels.</p>
+    </div>
+    <div class="source-list">
+      <article class="source-item">
+        <a href="https://www.thehansindia.com/news/cities/hyderabad/tellapur-resident-forums-raise-pitch-for-better-civic-amenities-1071854" target="_blank" rel="noopener">Tellapur resident forums raise pitch for better civic amenities</a>
+        <p>Coverage of TeNA-linked seven-point civic and environment demands submitted to local authorities.</p>
+        <div class="src-meta">The Hans India · 4 May 2026</div>
+      </article>
+      <article class="source-item">
+        <a href="https://hyderabadmail.com/tellapur-residents-run-for-voter-awareness-ahead-of-2024-elections/" target="_blank" rel="noopener">Tellapur residents run for voter awareness ahead of 2024 elections</a>
+        <p>Reports 200+ resident participation in TeNA's voter-awareness event and civic participation messaging.</p>
+        <div class="src-meta">Hyderabad Mail · 27 Apr 2024</div>
+      </article>
+      <article class="source-item">
+        <a href="https://www.deccanchronicle.com/nation/tellapur-neighborhood-association-conducts-voter-awareness-run-891406" target="_blank" rel="noopener">Tellapur Neighborhood Association conducts voter awareness run</a>
+        <p>Independent coverage of the same public awareness run with police and municipal participation.</p>
+        <div class="src-meta">Deccan Chronicle · 27 Apr 2024</div>
+      </article>
+      <article class="source-item">
+        <a href="https://hyderabadmail.com/tellapur-residents-stage-dharna/" target="_blank" rel="noopener">Tellapur residents stage dharna after bad roads stop school bus service</a>
+        <p>Ground report on road-condition protest, mobility disruptions, and resident demands for immediate repairs.</p>
+        <div class="src-meta">Hyderabad Mail · 21 Sep 2024</div>
+      </article>
+      <article class="source-item">
+        <a href="https://hyderabadmail.com/tellapur-karthika-vana-bhojanaalu-celebration/" target="_blank" rel="noopener">Karthika Vana Bhojanaalu community gathering in Tellapur</a>
+        <p>Reports 1,000+ attendance and participation across multiple communities in a TeNA-led event.</p>
+        <div class="src-meta">Hyderabad Mail · 2 Dec 2024</div>
+      </article>
+      <article class="source-item">
+        <a href="https://www.facebook.com/100069198806755/posts/tellapur-neighborhood-association-tena-organizes-annual-sports-competitions-to-f/940202668296351/" target="_blank" rel="noopener">TeNA annual sports competitions update</a>
+        <p>TeNA social update reporting 1,500+ participants from 72+ communities in the 2025 sports series.</p>
+        <div class="src-meta">TeNA Facebook page · 25 Jan 2025 (self-reported)</div>
+      </article>
+      <article class="source-item">
+        <a href="https://x.com/TellapurN" target="_blank" rel="noopener">TeNA official X account @TellapurN</a>
+        <p>Primary channel for civic updates, petitions, road and lake issue tracking, and community mobilization posts.</p>
+        <div class="src-meta">Official social channel</div>
+      </article>
+      <article class="source-item">
+        <a href="https://x.com/TellapurN/status/2061103102791684303" target="_blank" rel="noopener">No-Plastic Zone campaign post</a>
+        <p>TeNA post citing 30+ volunteers organized into 5 teams across multiple Tellapur roads and localities.</p>
+        <div class="src-meta">TeNA X post · 2026</div>
+      </article>
     </div>
   </div>
 </section>
